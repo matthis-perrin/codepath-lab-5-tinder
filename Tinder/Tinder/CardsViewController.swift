@@ -21,26 +21,5 @@ class CardsViewController: UIViewController {
         profileImageView.imageView.image = UIImage(named: "ryan")
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    @IBAction func didPan(sender: UIPanGestureRecognizer) {
-        // Absolute (x,y) coordinates in parent view (parentView should be
-        // the parent view of the tray)
-        let point = sender.locationInView(self.view)
-        
-        if sender.state == UIGestureRecognizerState.Began {
-            print("Gesture began at: \(point)")
-            profileImageViewCenterPoint = profileImageView.center
-        } else if sender.state == UIGestureRecognizerState.Changed {
-            let changeX = sender.translationInView(self.view).x + profileImageViewCenterPoint.x
-            profileImageView.center.x = changeX
-        } else if sender.state == UIGestureRecognizerState.Ended {
-            print("Gesture ended at: \(point)")
-        }
-    }
-
 }
 

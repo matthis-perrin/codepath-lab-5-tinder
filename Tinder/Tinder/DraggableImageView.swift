@@ -26,17 +26,15 @@ class DraggableImageView: UIView {
     }
     
     func initSubviews() {
-        // standard initialization logic
         let nib = UINib(nibName: "DraggableImageView", bundle: nil)
         nib.instantiateWithOwner(self, options: nil)
-        imageView.frame = bounds
         addSubview(imageView)
+        imageView.frame = bounds
         imageView.addGestureRecognizer(panGestureRecognizer)
     }
     
     
     @IBAction func didPanImage(sender: UIPanGestureRecognizer) {
-        print("Hello")
         if sender.state == UIGestureRecognizerState.Began {
             profileImageViewCenterPoint = self.imageView.center
         } else if sender.state == UIGestureRecognizerState.Changed {
