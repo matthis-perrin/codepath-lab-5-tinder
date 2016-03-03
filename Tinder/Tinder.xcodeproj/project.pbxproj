@@ -12,6 +12,8 @@
 		2D66EEDE1C87E27600546002 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D66EEDC1C87E27600546002 /* Main.storyboard */; };
 		2D66EEE01C87E27600546002 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D66EEDF1C87E27600546002 /* Assets.xcassets */; };
 		2D66EEE31C87E27600546002 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D66EEE11C87E27600546002 /* LaunchScreen.storyboard */; };
+		2D66EEEB1C87E8F900546002 /* DraggableImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2D66EEEA1C87E8F900546002 /* DraggableImageView.xib */; };
+		2D66EEED1C87E9A400546002 /* DraggableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D66EEEC1C87E9A400546002 /* DraggableImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		2D66EEDF1C87E27600546002 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D66EEE21C87E27600546002 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D66EEE41C87E27600546002 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2D66EEEA1C87E8F900546002 /* DraggableImageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DraggableImageView.xib; sourceTree = "<group>"; };
+		2D66EEEC1C87E9A400546002 /* DraggableImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,8 @@
 				2D66EED81C87E27600546002 /* AppDelegate.swift */,
 				2D66EEDA1C87E27600546002 /* CardsViewController.swift */,
 				2D66EEDC1C87E27600546002 /* Main.storyboard */,
+				2D66EEEA1C87E8F900546002 /* DraggableImageView.xib */,
+				2D66EEEC1C87E9A400546002 /* DraggableImageView.swift */,
 				2D66EEDF1C87E27600546002 /* Assets.xcassets */,
 				2D66EEE11C87E27600546002 /* LaunchScreen.storyboard */,
 				2D66EEE41C87E27600546002 /* Info.plist */,
@@ -124,6 +130,7 @@
 			files = (
 				2D66EEE31C87E27600546002 /* LaunchScreen.storyboard in Resources */,
 				2D66EEE01C87E27600546002 /* Assets.xcassets in Resources */,
+				2D66EEEB1C87E8F900546002 /* DraggableImageView.xib in Resources */,
 				2D66EEDE1C87E27600546002 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -136,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2D66EEDB1C87E27600546002 /* CardsViewController.swift in Sources */,
+				2D66EEED1C87E9A400546002 /* DraggableImageView.swift in Sources */,
 				2D66EED91C87E27600546002 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -12,13 +12,13 @@ class CardsViewController: UIViewController {
 
     @IBOutlet weak var auctionButtonsImageView: UIImageView!
     @IBOutlet weak var navBarImageView: UIImageView!
-    @IBOutlet weak var profileImageView: UIImageView!
+    @IBOutlet weak var profileImageView: DraggableImageView!
     
     var profileImageViewCenterPoint: CGPoint!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        profileImageView.imageView.image = UIImage(named: "ryan")
     }
 
     override func didReceiveMemoryWarning() {
