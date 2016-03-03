@@ -14,6 +14,8 @@ class DraggableImageView: UIView {
     
     @IBOutlet var panGestureRecognizer: UIPanGestureRecognizer!
     var profileImageViewCenterPoint: CGPoint!
+    var profileImageViewRotation: CGFloat! = CGFloat(0.0)
+    var touchedHigh: Bool!
 
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
@@ -36,10 +38,24 @@ class DraggableImageView: UIView {
     
     @IBAction func didPanImage(sender: UIPanGestureRecognizer) {
         if sender.state == UIGestureRecognizerState.Began {
+            
+            if sender.locationInView(imageView).y < imageView.frame.height / 2.0 {
+                touchedHigh = true
+            } else {
+                touchedHigh = false
+            }
             profileImageViewCenterPoint = self.imageView.center
         } else if sender.state == UIGestureRecognizerState.Changed {
             let changeX = sender.translationInView(self).x
             imageView.center.x = profileImageViewCenterPoint.x + changeX
+            var rotation = ((imageView.center.x - self.center.x) / 1000) * CGFloat(M_PI)
+            if !touchedHigh {
+                rotation = -rotation
+            }
+            imageView.transform = CGAffineTransformMakeRotation(rotation)
+            
+        } else if sender.state == UIGestureRecognizerState.Ended {
+            
         }
     }
 }
